@@ -7,10 +7,10 @@ def send_email(message):
     host = "smtp.gmail.com"
     port = 587
 
-    username = "khlaisuwanviphava@gmail.com"
+    username = os.getenv('EMAIL2')
     password = os.getenv('API_EMAIL_KEY')
 
-    receivers = ['khlaisuwanviphava@gmail.com', 'viphava_01@hotmail.com']
+    receivers = [os.getenv('EMAIL1'), os.getenv('EMAIL2')]
     context = ssl.create_default_context()
 
     # messages = """\
